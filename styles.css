@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f2f5;
+}
+
+h1 {
+  color: #333;
+}
+
+#game-container {
+  text-align: center;
+}
+
+/* Grille du morpion */
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px auto;
+}
+
+/* Style des cases */
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem; /* Taille pour 'X' et 'O' */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cell:hover {
+  background-color: #e0e0e0;
+}
+
+/* Style pour les joueurs */
+.cell.x {
+  color: #007bff; /* Bleu pour X */
+}
+
+.cell.o {
+  color: #dc3545; /* Rouge pour O */
+}
+
+/* Style pour les messages et le bouton */
+#status-message {
+  font-size: 1.2rem;
+  color: #555;
+  height: 30px; /* Hauteur fixe pour éviter les sauts de page */
+}
+
+#restart-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#restart-button:hover {
+  background-color: #0056b3;
+}
